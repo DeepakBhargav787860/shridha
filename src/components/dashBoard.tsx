@@ -10,7 +10,8 @@ import {
   Center,
   Box,
 } from "@mantine/core";
-
+import image1 from "../../public/images/1.jpg"
+import image2 from "../../public/images/2.jpg"
 const DashBoard = () => {
   return (
     <Box bg="#fffaf8">
@@ -42,11 +43,7 @@ const DashBoard = () => {
           spacing="lg"
           breakpoints={[{ maxWidth: "768px", cols: 1 }]}
         >
-          <Image
-            src="../public/images/2.jpg"
-            radius="md"
-            alt="About Wedding"
-          />
+          <Image src={image1} radius="md" alt="About Wedding" />
           <Stack justify="center">
             <Title order={2}>About Us</Title>
             <Text>
@@ -72,11 +69,7 @@ const DashBoard = () => {
         >
           <Card shadow="sm" padding="lg" radius="md" withBorder>
             <Card.Section>
-              <Image
-                src="../public/images/1.jpg"
-                height={200}
-                alt="Wedding"
-              />
+              <Image src={image2} height={200} alt="Wedding" />
             </Card.Section>
             <Title order={3} mt="md">
               Wedding Photography
@@ -89,11 +82,7 @@ const DashBoard = () => {
 
           <Card shadow="sm" padding="lg" radius="md" withBorder>
             <Card.Section>
-              <Image
-                src="../public/images/2.jpg"
-                height={200}
-                alt="Pre-Wedding"
-              />
+              <Image src={image1} height={200} alt="Pre-Wedding" />
             </Card.Section>
             <Title order={3} mt="md">
               Pre-Wedding Shoots
