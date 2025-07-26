@@ -6,6 +6,12 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
 
+    env:
+      API_KEY: ${{ secrets.MY_NAME }}
+
     steps:
       - name: print greeting
         run: echo "hello deepak family"
+
+      - name: print secret key
+        run: echo "Using secret key: $API_KEY"
