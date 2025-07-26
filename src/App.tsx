@@ -20,7 +20,7 @@ function App() {
 
   useHotkeys([["mod+T", () => toggleColorScheme()]]);
 
-  // @ts-ignore
+  // @ts-ignoresssss
   return (
     <>
       <ColorSchemeProvider
