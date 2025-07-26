@@ -1,5 +1,5 @@
 import axios from 'axios';
-// for productionhhhhh
+// for production
 // export function CreateWebSocketConnection(endpoint) {
 //   const base = "wss://mysocket-6xmu.onrender.com";
 //   const fullURL = `${base}${endpoint}`;
