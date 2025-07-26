@@ -1,11 +1,6 @@
-name: for testing purpose
-
-on: [push]
-
 jobs:
   say-hello:
     runs-on: ubuntu-latest
-
     env:
       API_KEY: ${{ secrets.MY_NAME }}
 
@@ -14,4 +9,4 @@ jobs:
         run: echo "hello deepak family"
 
       - name: print secret key
-        run: echo "Using secret key: $API_KEY"
+        run: echo "Using secret key: ${API_KEY}"
