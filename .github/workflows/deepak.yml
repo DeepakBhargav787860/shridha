@@ -1,8 +1,11 @@
 name: for testing purpose
+
 on: [push]
+
 jobs:
- say-hello:
- runs-on: ubuntu-latest
-  steps:
-    -name: print greeting
-     run: echo "hello deepak family"
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print greeting
+        run: echo "hello deepak family"
