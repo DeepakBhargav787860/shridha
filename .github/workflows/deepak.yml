@@ -1,15 +1,25 @@
-name: for testing purpose
+name: Node.js CI
 
-on: [push]
+on:
+  push:
+    branches: [main]
 
 jobs:
-  say-hello:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Access Secret
-        run: echo "My secret key is ${{ secrets.MY_NAME }}"
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Access Variable
-        run: echo "My variable is ${{ vars.MY_AGE }}"
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
 
