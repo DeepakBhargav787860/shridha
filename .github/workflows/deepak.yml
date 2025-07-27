@@ -1,27 +1,30 @@
-name: Node.js CI
+name: Send Email on Push to Main
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  build-and-test:
+  send_email:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Send Email
+        uses: dawidd6/action-send-mail@v3
         with:
-          node-version: 18
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: 🚀 Code Pushed to Main Branch
+          to: ${{ secrets.TO_EMAIL }}
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: |
+            Hello,  
+            New code has been pushed to the `main` branch of your GitHub repo.
 
-      - name: Install dependencies
-        run: npm install
+            ✅ Repository: ${{ github.repository }}
+            🧑‍💻 Pusher: ${{ github.actor }}
+            🔗 Commit URL: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
 
-      - name: Build the project
-        run: npm run build
-
-      - name: Run tests
-        run: npm test
+            - GitHub Actions
