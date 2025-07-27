@@ -3,7 +3,7 @@ import axios from 'axios';
 // export function CreateWebSocketConnection(endpoint) {
 //   const base = "wss://mysocket-6xmu.onrender.com";
 //   const fullURL = `${base}${endpoint}`;
-//   return new WebSocket(fullURL);
+//   return new WebSocket(fullURL)
 // }
 
 
