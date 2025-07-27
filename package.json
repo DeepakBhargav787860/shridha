@@ -1,13 +1,17 @@
 {
   "name": "chat-application",
+  "homepage": "https://deepakbharagv.github.io/ajayStudio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "test": "echo 'Running tests...'",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+       "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+      "start": "vite",
+      "dev": "vite",
+       "test": "echo 'Running tests...'",
+       "build": "tsc && vite build",
+       "preview": "vite preview"
   },
   "dependencies": {
     "@devnomic/marquee": "^1.0.2",
@@ -41,6 +45,7 @@
     "embla-carousel-autoplay": "^7.1.0",
     "embla-carousel-react": "^7.1.0",
     "framer-motion": "^11.1.9",
+    "gh-pages": "^6.3.0",
     "mantine-react-table": "^1.2.0",
     "path": "^0.12.7",
     "qrcode.react": "^4.2.0",
