@@ -6,6 +6,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/shridha/', // 👈 must match your GitHub repo name
   plugins: [react()],
+    server:{
+    host:'127.0.0.1'
+  }
 })
 
 // https://vitejs.dev/config/
