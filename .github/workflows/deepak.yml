@@ -1,4 +1,4 @@
-name: Send Email on Push to Main
+name: Deploy React App to GitHub Pages
 
 on:
   push:
@@ -6,25 +6,26 @@ on:
       - main
 
 jobs:
-  send_email:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Send Email
-        uses: dawidd6/action-send-mail@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          server_address: smtp.gmail.com
-          server_port: 587
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: 🚀 Code Pushed to Main Branch
-          to: ${{ secrets.TO_EMAIL }}
-          from: ${{ secrets.EMAIL_USERNAME }}
-          body: |
-            Hello,  
-            New code has been pushed to the `main` branch of your GitHub repo.
+          node-version: 18
 
-            ✅ Repository: ${{ github.repository }}
-            🧑‍💻 Pusher: ${{ github.actor }}
-            🔗 Commit URL: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
+      - name: Install dependencies
+        run: npm install
 
-            - GitHub Actions
+      - name: Build app
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
