@@ -14,6 +14,7 @@ import {
   Grid,
   Paper,
   Divider,
+  Anchor,
 } from "@mantine/core";
 import {
   IconBrandInstagram,
@@ -53,18 +54,30 @@ const DashBoard = () => {
           p="sm"
           style={{ borderRadius: "0 50% 50% 0" }}
         >
-          <ThemeIcon radius="xl" size="lg" color="grape">
-            <IconBrandInstagram size={20} />
-          </ThemeIcon>
-          <ThemeIcon radius="xl" size="lg" color="blue">
-            <IconMail size={20} />
-          </ThemeIcon>
+          {/* Instagram */}
+          <Anchor
+            href="https://www.instagram.com/theajphotography98?igsh=aWFqbWFqMDVld3B3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ThemeIcon radius="xl" size="lg" color="grape">
+              <IconBrandInstagram size={20} />
+            </ThemeIcon>
+          </Anchor>
+
+          {/* Email */}
+          <Anchor href="mailto:bhargavajay67@gmail.com">
+            <ThemeIcon radius="xl" size="lg" color="blue">
+              <IconMail size={20} />
+            </ThemeIcon>
+          </Anchor>
+
+          {/* WhatsApp (Optional: you can add link if needed) */}
           <ThemeIcon radius="xl" size="lg" color="green">
             <IconBrandWhatsapp size={20} />
           </ThemeIcon>
         </Stack>
       </Box>
-
       {/* Hero Section */}
       <Box
         style={{
