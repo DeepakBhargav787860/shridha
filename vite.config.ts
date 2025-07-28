@@ -1,4 +1,4 @@
-// For ES Module style vite.config.tsaaa
+// For ES Module style vite.config.ts
 import path from 'path';
 
 import { fileURLToPath } from 'url';
