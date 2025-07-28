@@ -1,4 +1,4 @@
-// For ES Module style vite.config.ts
+// // For ES Module style vite.config.ts
 import path from 'path';
 
 import { fileURLToPath } from 'url';
@@ -17,3 +17,37 @@ export default defineConfig({
   },
   base: '/shridha/',
 });
+
+
+
+
+// import { BrowserRouter } from 'react-router-dom';
+
+// <BrowserRouter basename="/shridha">
+//   {/* all your routes here */}
+// </BrowserRouter>
+
+
+
+// import { viteStaticCopy } from 'vite-plugin-static-copy'
+
+// export default defineConfig({
+//   plugins: [
+//     react(),
+//     viteStaticCopy({
+//       targets: [
+//         {
+//           src: 'dist/index.html',
+//           dest: '', // it will go to dist/404.html
+//           rename: '404.html'
+//         }
+//       ]
+//     })
+//   ],
+//   base: '/shridha/',
+//   resolve: {
+//     alias: {
+//       '@': path.resolve(__dirname, 'src'),
+//     },
+//   },
+// });
