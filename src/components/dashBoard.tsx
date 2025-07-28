@@ -90,7 +90,7 @@ const DashBoard = () => {
       >
         <Container>
           <Title order={1} size="3rem" align="center">
-            Pre-Wedding by AJ Photography
+            The AJ Photography
           </Title>
           <Text size="lg" align="center" mt="sm">
             Your Love, Our Lens – Capturing Forever Begins Here
@@ -255,9 +255,9 @@ const DashBoard = () => {
         </Title>
         <Stack align="center" spacing="xs">
           <Text>Email: bhargavajay67@gmail.com</Text>
-          <Text>Phone: +91 98765 43210</Text>
+          <Text>Phone: 9928150744</Text>
           <Text>Instagram: @theajphotography98</Text>
-          <Text>WhatsApp: +91 98765 43210</Text>
+          <Text>WhatsApp: 9928150744</Text>
         </Stack>
       </Container>
     </Box>
