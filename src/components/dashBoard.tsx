@@ -72,7 +72,7 @@ const DashBoard = () => {
               <Image src={image2} height={200} alt="Wedding" />
             </Card.Section>
             <Title order={3} mt="md">
-              Wedding Photography
+              Wedding Photography deepak
             </Title>
             <Text mt="xs">
               Elegant, emotional, and unforgettable wedding moments captured
